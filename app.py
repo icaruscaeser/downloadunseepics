@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
         config.IS_STAGING = True
         print('Staging environment')
-        config.CONFIG_DATA['server_url'] = 'https://downloadunseepics.herpokuapp.com'
+        config.CONFIG_DATA['server_url'] = 'https://downloadunseepics.herokuapp.com'
 
         # refer https://medium.com/@mikelcbrowne/running-chromedriver-with-python-selenium-on-heroku-acc1566d161c
         config.GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
