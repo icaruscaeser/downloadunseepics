@@ -44,6 +44,7 @@ if __name__ == '__main__':
 
     if os.environ.get('staging'):
 
+        config.IS_STAGING = True
         print('Staging environment')
         config.CONFIG_DATA['server_url'] = 'https://downloadunseepics.herpokuapp.com'
 
@@ -58,4 +59,5 @@ if __name__ == '__main__':
         # enable headless
         config.CHROME_OPTIONS.add_argument('--headless')
 
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=not config.IS_STAGING)

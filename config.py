@@ -10,3 +10,5 @@ GOOGLE_CHROME_PATH = None
 CHROMEDRIVER_PATH = None
 
 DOWNLOAD_DIR = 'downloads'
+
+IS_STAGING = False
