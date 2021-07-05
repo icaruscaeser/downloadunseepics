@@ -40,6 +40,7 @@ def test():
 if __name__ == '__main__':
 
     if config.DOWNLOAD_DIR not in os.listdir():
+        print('Creating {} directory'.format(config.DOWNLOAD_DIR))
         os.mkdir(config.DOWNLOAD_DIR)
 
     if os.environ.get('staging'):
@@ -60,4 +61,5 @@ if __name__ == '__main__':
         config.CHROME_OPTIONS.add_argument('--headless')
 
     port = int(os.environ.get('PORT', 5000))
+
     app.run(host='0.0.0.0', port=port, debug=not config.IS_STAGING)
