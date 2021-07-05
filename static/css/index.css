@@ -1,0 +1,13 @@
+.main-title{
+    text-align: center;
+    margin: auto;
+}
+
+.body-wrap{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+#download_button{
+    margin-top: 2rem;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var server_url = "{{ data.server_url }}";
+        console.log(server_url);
+    </script>
+    <script src="/static/js/app.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <title>Download Unsee</title>
+</head>
+<body>
+    <div class="body-wrap">
+        <h1 class="main-title">Download all unsee photos with a single click</h1>
+        <br>
+        <h3 class="main-title">Supports both old unsee and new unsee</h3>
+        <br>
+        <label>Unsee URL : </label>
+        <input id="url_input" type="text" placeholder="https://unsee.cc/album#GThdiMLcm4tJMylR"/>
+        <br>
+        <button id="download_button" onclick="download_pics()">download photos</button>`
+    </div>
+
+</body>
+</html>
