@@ -60,6 +60,8 @@ if __name__ == '__main__':
         # enable headless
         config.CHROME_OPTIONS.add_argument('--headless')
 
+    if os.environ.get('hosting') == 'glitch':
+        config.CONFIG_DATA['server_url'] = os.environ.get('server_url')
     port = int(os.environ.get('PORT', 5000))
 
     app.run(host='0.0.0.0', port=port, debug=not config.IS_STAGING)
