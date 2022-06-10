@@ -63,3 +63,5 @@ function handle_file(xhr){
       document.body.removeChild(a);
     }
 }
+
+console.log("Files loaded and primed");
