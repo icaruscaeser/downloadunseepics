@@ -37,10 +37,15 @@ function download_pics(){
         if(xhr.status == 500){
             alert('Error occurred');
         }
+
+        // hide overlay
+        document.getElementById('overlay-div').style.display = "none";
     }
 
     xhr.open('GET', api);
     xhr.send();
+    //display overlay
+    document.getElementById('overlay-div').style.display = "block";
 }
 
 function handle_file(xhr){
